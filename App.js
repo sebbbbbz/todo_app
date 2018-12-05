@@ -8,7 +8,6 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
       <Header textIwant={'helllllo'} />
-      <Header textIwant={'goodbye'} />
       {/* <Header textIwant={'Hello World'} /> */}
         <Avatar
           xlarge
