@@ -2,12 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { Avatar } from 'react-native-elements';
 import Header from './component/headers';
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import TodoScreen from './screens/Todo';
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <Header textIwant={'helllllo'} />
+      <Header textIwant={'Welcome to my life!'} />
       {/* <Header textIwant={'Hello World'} /> */}
         <Avatar
           xlarge
@@ -19,14 +21,22 @@ export default class App extends React.Component {
         <Text Style={styles.bigblue}>I am handsome!</Text>
 
         <Button 
-        onPress={() => { console.log('happy'); }} 
-        title={'Hello'} 
-        color='blue' 
+          title="Go to Todo"
+          onPress={() => this.props.navigation.navigate('Todo')}
         />
       </View>
     );
   }
 }
+
+const AppNavigator = createStackNavigator({
+  Home: App,
+  Todo: TodoScreen,
+});
+
+const AppContainer = createAppContainer(AppNavigator);
+
+export default AppContainer
 
 const styles = StyleSheet.create({
   container: {
