@@ -18,7 +18,7 @@ class App extends React.Component {
       <View style={styles.container}>
         <Header textIwant={'Welcome to my life!'} />
         <View style={{ padding: 10 }} />
-        <Header textIwant={'Hello World'} /> 
+        <Header textIwant={'This is Sebastian'} /> 
         <View style={{ padding: 5 }} />
         <Avatar
           xlarge
@@ -49,7 +49,7 @@ const AppNavigator = createStackNavigator({
   Todo: TodoScreen,
   Flexbox: FlexboxScreen,
 }, {
- headerLayoutPreset: 'center' 
+ headerLayoutPreset: 'left' 
 });
 
 const AppContainer = createAppContainer(AppNavigator);
@@ -59,7 +59,7 @@ export default AppContainer
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'mintcream',
     alignItems: 'center',
     justifyContent: 'center',
   },
