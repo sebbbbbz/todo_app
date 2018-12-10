@@ -1,16 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-class TodoScreen extends React.Component {
- 
+class FlexboxScreen extends React.Component {
+
     static navigationOptions = {
-        title: 'Todo',
+        title: 'Flexbox',
       }; 
 
     render() {
         return (
-        <Text> Todo App</Text>);
+            <Text> Flexbox! </Text>);
     }
 }
 
-export default TodoScreen;
+export default FlexboxScreen;
